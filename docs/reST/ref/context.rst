@@ -22,13 +22,18 @@
    per app name.
 
    It takes two strings, ``org`` and ``app``. It then will figure out the
-   preferred path, creating the folders referenced by the path if necessary,
-   and returns an absolute path.
+   preferred path, **creating the folders referenced by the path if necessary**,
+   and returns a string containing the absolute path.
 
-   On Windows, it would be like
-   ::
-    C:\\Users\\bob\\AppData\\Roaming\\My Company\\My Program Name\\
+   For example::
 
-   On Mac, it would be like
-   ::
-    /Users/bob/Library/Application Support/My Program Name/
+        On Windows, it would resemble
+        C:\\Users\\bob\\AppData\\Roaming\\My Company\\My Program Name\\
+
+        On macOS, it would resemble
+        /Users/bob/Library/Application Support/My Program Name/
+
+        And on Linux it would resemble
+        /home/bob/.local/share/My Program Name/
+
+  
